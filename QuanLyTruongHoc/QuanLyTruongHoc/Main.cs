@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyTruongHoc.User;
+using System.Threading;
 
 namespace QuanLyTruongHoc
 {
@@ -23,7 +24,7 @@ namespace QuanLyTruongHoc
         private void btTeacher_Click(object sender, EventArgs e)
         {
             pnMain.Controls.Clear();
-            pnMain.Controls.Add(new TeacherUC(pnMain.Width,pnMain.Height));
+            pnMain.Controls.Add(new TeacherUC(pnMain.Width, pnMain.Height));
         }
 
         private void btStudent_Click(object sender, EventArgs e)
@@ -52,7 +53,14 @@ namespace QuanLyTruongHoc
 
         private void btLogout_Click(object sender, EventArgs e)
         {
-
+            Thread thr = new Thread(ShowLogin);
+            thr.Start();
+            this.Close();
+        }
+        void ShowLogin()
+        {
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         private void btHome_Click(object sender, EventArgs e)
