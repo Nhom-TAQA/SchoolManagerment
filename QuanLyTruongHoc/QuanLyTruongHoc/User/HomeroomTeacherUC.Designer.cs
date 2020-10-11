@@ -94,7 +94,6 @@
             this.dgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgView.Size = new System.Drawing.Size(1004, 439);
             this.dgView.TabIndex = 5;
-            this.dgView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_CellClick);
             // 
             // STT
             // 
@@ -150,7 +149,7 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(561, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 19);
+            this.label5.Size = new System.Drawing.Size(80, 22);
             this.label5.TabIndex = 10;
             this.label5.Text = "Năm học";
             // 
@@ -159,7 +158,7 @@
             this.txbSchoolYear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbSchoolYear.Location = new System.Drawing.Point(647, 15);
             this.txbSchoolYear.Name = "txbSchoolYear";
-            this.txbSchoolYear.Size = new System.Drawing.Size(100, 26);
+            this.txbSchoolYear.Size = new System.Drawing.Size(100, 30);
             this.txbSchoolYear.TabIndex = 9;
             // 
             // label4
@@ -168,7 +167,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(266, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 19);
+            this.label4.Size = new System.Drawing.Size(118, 22);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tên giáo viên";
             // 
@@ -177,7 +176,7 @@
             this.txbTeacherName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbTeacherName.Location = new System.Drawing.Point(398, 69);
             this.txbTeacherName.Name = "txbTeacherName";
-            this.txbTeacherName.Size = new System.Drawing.Size(100, 26);
+            this.txbTeacherName.Size = new System.Drawing.Size(100, 30);
             this.txbTeacherName.TabIndex = 7;
             // 
             // label3
@@ -186,7 +185,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(26, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 19);
+            this.label3.Size = new System.Drawing.Size(46, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Loại";
             // 
@@ -195,7 +194,7 @@
             this.txbType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbType.Location = new System.Drawing.Point(88, 70);
             this.txbType.Name = "txbType";
-            this.txbType.Size = new System.Drawing.Size(100, 26);
+            this.txbType.Size = new System.Drawing.Size(100, 30);
             this.txbType.TabIndex = 5;
             // 
             // label2
@@ -204,7 +203,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(266, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
+            this.label2.Size = new System.Drawing.Size(114, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mã giáo viên";
             // 
@@ -214,7 +213,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(26, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 19);
+            this.label1.Size = new System.Drawing.Size(42, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Lớp";
             // 
@@ -223,7 +222,7 @@
             this.txbClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbClass.Location = new System.Drawing.Point(87, 15);
             this.txbClass.Name = "txbClass";
-            this.txbClass.Size = new System.Drawing.Size(100, 26);
+            this.txbClass.Size = new System.Drawing.Size(100, 30);
             this.txbClass.TabIndex = 2;
             // 
             // txbTeacherCode
@@ -231,7 +230,7 @@
             this.txbTeacherCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbTeacherCode.Location = new System.Drawing.Point(398, 15);
             this.txbTeacherCode.Name = "txbTeacherCode";
-            this.txbTeacherCode.Size = new System.Drawing.Size(100, 26);
+            this.txbTeacherCode.Size = new System.Drawing.Size(100, 30);
             this.txbTeacherCode.TabIndex = 1;
             // 
             // panel1
@@ -253,14 +252,13 @@
             this.btSearch.Size = new System.Drawing.Size(40, 34);
             this.btSearch.TabIndex = 9;
             this.btSearch.UseVisualStyleBackColor = true;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // Text
             // 
             this.Text.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Text.Location = new System.Drawing.Point(12, 18);
             this.Text.Name = "Text";
-            this.Text.Size = new System.Drawing.Size(100, 26);
+            this.Text.Size = new System.Drawing.Size(100, 30);
             this.Text.TabIndex = 0;
             // 
             // btAdd
@@ -271,7 +269,6 @@
             this.btAdd.Size = new System.Drawing.Size(40, 40);
             this.btAdd.TabIndex = 8;
             this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btEdit
             // 
@@ -281,7 +278,6 @@
             this.btEdit.Size = new System.Drawing.Size(40, 40);
             this.btEdit.TabIndex = 7;
             this.btEdit.UseVisualStyleBackColor = true;
-            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btDelete
             // 
@@ -291,7 +287,6 @@
             this.btDelete.Size = new System.Drawing.Size(40, 40);
             this.btDelete.TabIndex = 6;
             this.btDelete.UseVisualStyleBackColor = true;
-            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // HomeroomTeacherUC
             // 
