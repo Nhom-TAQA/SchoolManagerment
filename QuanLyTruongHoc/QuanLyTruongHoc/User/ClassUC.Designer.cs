@@ -57,14 +57,14 @@
             this.panel1.Controls.Add(this.txbText);
             this.panel1.Location = new System.Drawing.Point(826, 18);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 64);
+            this.panel1.Size = new System.Drawing.Size(194, 55);
             this.panel1.TabIndex = 0;
             // 
             // btSearch
             // 
             this.btSearch.BackgroundImage = global::QuanLyTruongHoc.Properties.Resources.icons8_search_48;
             this.btSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btSearch.Location = new System.Drawing.Point(138, 18);
+            this.btSearch.Location = new System.Drawing.Point(142, 13);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(40, 31);
             this.btSearch.TabIndex = 9;
@@ -73,9 +73,9 @@
             // txbText
             // 
             this.txbText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txbText.Location = new System.Drawing.Point(12, 18);
+            this.txbText.Location = new System.Drawing.Point(3, 14);
             this.txbText.Name = "txbText";
-            this.txbText.Size = new System.Drawing.Size(100, 30);
+            this.txbText.Size = new System.Drawing.Size(121, 30);
             this.txbText.TabIndex = 0;
             // 
             // panel2
@@ -90,7 +90,7 @@
             this.panel2.Controls.Add(this.txbClass);
             this.panel2.Location = new System.Drawing.Point(16, 18);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 64);
+            this.panel2.Size = new System.Drawing.Size(782, 55);
             this.panel2.TabIndex = 1;
             // 
             // cbType
@@ -175,7 +175,7 @@
             this.STT,
             this.ClassCode,
             this.Type});
-            this.dgView.Location = new System.Drawing.Point(16, 113);
+            this.dgView.Location = new System.Drawing.Point(16, 88);
             this.dgView.Name = "dgView";
             this.dgView.RowHeadersVisible = false;
             this.dgView.RowHeadersWidth = 51;
@@ -188,7 +188,7 @@
             this.dgView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgView.RowTemplate.Height = 24;
             this.dgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgView.Size = new System.Drawing.Size(1004, 479);
+            this.dgView.Size = new System.Drawing.Size(1004, 504);
             this.dgView.TabIndex = 2;
             // 
             // STT
