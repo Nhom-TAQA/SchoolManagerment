@@ -51,6 +51,7 @@
             this.btLogin.TabIndex = 0;
             this.btLogin.Text = "Đăng nhập";
             this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // cbShowPassword
             // 
@@ -62,6 +63,7 @@
             this.cbShowPassword.TabIndex = 1;
             this.cbShowPassword.Text = "Hiển thị";
             this.cbShowPassword.UseVisualStyleBackColor = true;
+            this.cbShowPassword.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged_1);
             // 
             // txbUsername
             // 
