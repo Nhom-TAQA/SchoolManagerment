@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="HomeroomTeacherEF.cs" />
     <Compile Include="HomeroomTeacherFt.cs" />
+    <Compile Include="ImageHandle.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
