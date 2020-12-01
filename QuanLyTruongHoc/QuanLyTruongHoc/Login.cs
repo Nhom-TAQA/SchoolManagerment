@@ -50,11 +50,7 @@ namespace QuanLyTruongHoc
                 }
             }
         }
-        void DisplayNewForm()
-        {
-            Main form = new Main();
-            form.ShowDialog();
-        }
+        
 
         private void cbShowPassword_CheckedChanged_1(object sender, EventArgs e)
         {
