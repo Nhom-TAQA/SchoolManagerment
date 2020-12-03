@@ -23,7 +23,12 @@ namespace QuanLyTruongHoc
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            
+            if (txbPassword.Text == "" || txbUsername.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            string username = txbUsername.Text;
             List<AccountEF> listResults = new AccountFt().SelectAll().Where(x => x.Username == username).ToList();
             if (listResults == null)
             {
