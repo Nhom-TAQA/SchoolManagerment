@@ -58,7 +58,14 @@ namespace QuanLyTruongHoc
 
         private void cbShowPassword_CheckedChanged_1(object sender, EventArgs e)
         {
-            
+            if (cbShowPassword.Checked)
+            {
+                txbPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txbPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
