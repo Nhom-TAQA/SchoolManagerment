@@ -29,8 +29,7 @@ namespace QuanLyTruongHoc
 
         private void btStudent_Click(object sender, EventArgs e)
         {
-            pnMain.Controls.Clear();
-            pnMain.Controls.Add(new StudentUC());
+          
         }
 
         private void btClass_Click(object sender, EventArgs e)
