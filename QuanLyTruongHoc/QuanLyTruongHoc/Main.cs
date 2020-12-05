@@ -65,8 +65,7 @@ namespace QuanLyTruongHoc
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            pnMain.Controls.Clear();
-            pnMain.Controls.Add(new Home());
+           
         }
     }
 }
