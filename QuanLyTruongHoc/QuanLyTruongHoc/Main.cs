@@ -53,9 +53,7 @@ namespace QuanLyTruongHoc
 
         private void btLogout_Click(object sender, EventArgs e)
         {
-            Thread thr = new Thread(ShowLogin);
-            thr.Start();
-            this.Close();
+            
         }
         void ShowLogin()
         {
