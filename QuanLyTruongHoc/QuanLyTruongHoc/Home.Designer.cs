@@ -37,7 +37,7 @@
             this.BackgroundImage = global::QuanLyTruongHoc.Properties.Resources.quy_mo_truong;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(1038, 620);
+            this.Size = new System.Drawing.Size(1037, 612);
             this.ResumeLayout(false);
 
         }
