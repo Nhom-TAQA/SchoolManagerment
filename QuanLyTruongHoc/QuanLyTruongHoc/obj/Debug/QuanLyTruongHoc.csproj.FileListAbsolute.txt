@@ -49,7 +49,6 @@ C:\Users\MTAAMF\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongH
 C:\Users\MTAAMF\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.csproj.CoreCompileInputs.cache
 C:\Users\MTAAMF\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.exe
 C:\Users\MTAAMF\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.pdb
-<<<<<<< HEAD
 C:\Users\DELL\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\QuanLyTruongHoc.exe.config
 C:\Users\DELL\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\QuanLyTruongHoc.exe
 C:\Users\DELL\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\QuanLyTruongHoc.pdb
@@ -84,5 +83,3 @@ C:\Users\admin\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHo
 C:\Users\admin\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.csproj.CoreCompileInputs.cache
 C:\Users\admin\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.exe
 C:\Users\admin\Documents\GitHub\SchoolManagerment\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.pdb
-=======
->>>>>>> parent of 35a628a... Merge branch 'master' of https://github.com/Nhom-TAQA/SchoolManagerment
