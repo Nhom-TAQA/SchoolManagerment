@@ -41,8 +41,7 @@ namespace QuanLyTruongHoc
 
         private void btHomeroomTeacher_Click(object sender, EventArgs e)
         {
-            pnMain.Controls.Clear();
-            pnMain.Controls.Add(new HomeroomTeacherUC());
+           
         }
 
         private void btStudentInClass_Click(object sender, EventArgs e)
