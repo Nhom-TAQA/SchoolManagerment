@@ -156,17 +156,7 @@ namespace QuanLyTruongHoc.User
                 MessageBox.Show("Học sinh không tồn tại");
                 return;
             }
-            _ef.SchoolYear = txbSchoolYear.Text;
-            bool result = new StudentInClassFt().Delete(_ef);
-            if (result == true)
-            {
-                List<StudentInClassEF> listStudentInClass = new StudentInClassFt().SelectAll();
-                Load(listStudentInClass);
-                MessageBox.Show("Xóa thành công");
-            }
-            else
-            {
-                MessageBox.Show("Xóa không thành công");
+            
             }
         }
 
