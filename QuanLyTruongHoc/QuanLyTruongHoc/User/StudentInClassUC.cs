@@ -111,15 +111,7 @@ namespace QuanLyTruongHoc.User
                 MessageBox.Show("Lớp không tồn tại");
                 return;
             }
-            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_student == null)
-            {
-                MessageBox.Show("Học sinh không tồn tại");
-                return;
-            }
-            _ef.SchoolYear = txbSchoolYear.Text;
-            bool result = new StudentInClassFt().Update(_ef);
-            if (result == true)
+           
             {
                 List<StudentInClassEF> listStudentInClass = new StudentInClassFt().SelectAll();
                 Load(listStudentInClass);
