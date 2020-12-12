@@ -142,7 +142,15 @@ namespace QuanLyTruongHoc.User
             if (_ef == null)
             {
                 MessageBox.Show("Đối tượng không tồn tại");
-         Ft().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+                return;
+            }
+            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
+            if (_class == null)
+            {
+                MessageBox.Show("Lớp không tồn tại");
+                return;
+            }
+            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
             if (_student == null)
             {
                 MessageBox.Show("Học sinh không tồn tại");
