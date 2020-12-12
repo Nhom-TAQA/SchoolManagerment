@@ -172,7 +172,10 @@ namespace QuanLyTruongHoc.User
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-         
+            if (Text.Text == "")
+            {
+                MessageBox.Show("Nhập từ cần tìm kiếm");
+                return;
             }
             string text = Text.Text;
             List<StudentInClassEF> listResults = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == text || x.StudentCode.ToString() == text || x.SchoolYear == text).ToList();
