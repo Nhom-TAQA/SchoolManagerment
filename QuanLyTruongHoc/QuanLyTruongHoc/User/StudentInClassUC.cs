@@ -31,131 +31,6 @@ namespace QuanLyTruongHoc.User
                 index++;
             }
         }
-        private void btAdd_Click(object sender, EventArgs e)
-        {
-            if (txbClass.Text == "" || txbStudentCode.Text == "" || Text.Text == "")
-            {
-                return;
-            }
-            StudentInClassEF _ef = new StudentInClassEF();
-            _ef = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text && x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_ef != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
-            if (_class != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_student != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            StudentInClassEF ef = new StudentInClassEF();
-            ef.ClassCode = txbClass.Text;
-            ef.StudentCode = Int32.Parse(txbStudentCode.Text);
-            ef.SchoolYear = txbSchoolYear.Text;
-            bool result = new StudentInClassFt().Insert(ef);
-            if (result == true)
-            {
-                MessageBox.Show("");
-            }
-            else
-            {
-                MessageBox.Show("");
-            }
-        }
-
-        private void btEdit_Click(object sender, EventArgs e)
-        {
-            if (txbClass.Text == "" || txbStudentCode.Text == "" || Text.Text == "")
-            {
-                return;
-            }
-            StudentInClassEF _ef = new StudentInClassEF();
-            _ef = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text && x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_ef == null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
-            if (_class != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_student != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            _ef.SchoolYear = txbSchoolYear.Text;
-            bool result = new StudentInClassFt().Update(_ef);
-            if (result == true)
-            {
-                MessageBox.Show("");
-            }
-            else
-            {
-                MessageBox.Show("");
-            }
-        }
-
-        private void btDelete_Click(object sender, EventArgs e)
-        {
-            if (txbClass.Text == "" || txbStudentCode.Text == "" || Text.Text == "")
-            {
-                return;
-            }
-            StudentInClassEF _ef = new StudentInClassEF();
-            _ef = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text && x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_ef == null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
-            if (_class != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
-            if (_student != null)
-            {
-                MessageBox.Show("");
-                return;
-            }
-            _ef.SchoolYear = txbSchoolYear.Text;
-            bool result = new StudentInClassFt().Delete(_ef);
-            if (result == true)
-            {
-                MessageBox.Show("");
-            }
-            else
-            {
-                MessageBox.Show("");
-            }
-        }
-
-        private void btSearch_Click(object sender, EventArgs e)
-        {
-            if (Text.Text == "")
-            {
-                MessageBox.Show("");
-                return;
-            }
-            string text = Text.Text;
-            List<StudentInClassEF> listResults = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == text || x.StudentCode.ToString() == text || x.SchoolYear == text).ToList();
-            Load(listResults);
-        }
 
         private void dgView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -173,6 +48,138 @@ namespace QuanLyTruongHoc.User
             txbSchoolYear.Text = ef.SchoolYear;
             txbType.Text = _class.Type == true ? "Lớp chọn" : "Lớp đại trà";
             txbStudentName.Text = student.FullName;
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            if (txbClass.Text == "" || txbStudentCode.Text == "")
+            {
+                return;
+            }
+            StudentInClassEF _ef = new StudentInClassEF();
+            _ef = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text && x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+            if (_ef != null)
+            {
+                MessageBox.Show("Đối tượng đã tồn tại");
+                return;
+            }
+            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
+            if (_class == null)
+            {
+                MessageBox.Show("Lớp không tồn tại");
+                return;
+            }
+            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+            if (_student == null)
+            {
+                MessageBox.Show("Học sinh không tồn tại");
+                return;
+            }
+            StudentInClassEF ef = new StudentInClassEF();
+            ef.ClassCode = txbClass.Text;
+            ef.StudentCode = Int32.Parse(txbStudentCode.Text);
+            ef.SchoolYear = txbSchoolYear.Text;
+            bool result = new StudentInClassFt().Insert(ef);
+            if (result == true)
+            {
+                List<StudentInClassEF> listStudentInClass = new StudentInClassFt().SelectAll();
+                Load(listStudentInClass);
+                MessageBox.Show("Thêm thành công.");
+            }
+            else
+            {
+                MessageBox.Show("Thêm không thành công");
+            }
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            if (txbClass.Text == "" || txbStudentCode.Text == "")
+            {
+                return;
+            }
+            StudentInClassEF _ef = new StudentInClassEF();
+            _ef = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text && x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+            if (_ef == null)
+            {
+                MessageBox.Show("Đối tượng không tồn tại");
+                return;
+            }
+            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
+            if (_class == null)
+            {
+                MessageBox.Show("Lớp không tồn tại");
+                return;
+            }
+            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+            if (_student == null)
+            {
+                MessageBox.Show("Học sinh không tồn tại");
+                return;
+            }
+            _ef.SchoolYear = txbSchoolYear.Text;
+            bool result = new StudentInClassFt().Update(_ef);
+            if (result == true)
+            {
+                List<StudentInClassEF> listStudentInClass = new StudentInClassFt().SelectAll();
+                Load(listStudentInClass);
+                MessageBox.Show("Sửa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sửa không thành công");
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            if (txbClass.Text == "" || txbStudentCode.Text == "")
+            {
+                return;
+            }
+            StudentInClassEF _ef = new StudentInClassEF();
+            _ef = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text && x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+            if (_ef == null)
+            {
+                MessageBox.Show("Đối tượng không tồn tại");
+                return;
+            }
+            ClassEF _class = new ClassFt().SelectAll().Where(x => x.ClassCode == txbClass.Text).FirstOrDefault();
+            if (_class == null)
+            {
+                MessageBox.Show("Lớp không tồn tại");
+                return;
+            }
+            StudentEF _student = new StudentFt().SelectAll().Where(x => x.StudentCode.ToString() == txbStudentCode.Text).FirstOrDefault();
+            if (_student == null)
+            {
+                MessageBox.Show("Học sinh không tồn tại");
+                return;
+            }
+            _ef.SchoolYear = txbSchoolYear.Text;
+            bool result = new StudentInClassFt().Delete(_ef);
+            if (result == true)
+            {
+                List<StudentInClassEF> listStudentInClass = new StudentInClassFt().SelectAll();
+                Load(listStudentInClass);
+                MessageBox.Show("Xóa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công");
+            }
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            if (Text.Text == "")
+            {
+                MessageBox.Show("Nhập từ cần tìm kiếm");
+                return;
+            }
+            string text = Text.Text;
+            List<StudentInClassEF> listResults = new StudentInClassFt().SelectAll().Where(x => x.ClassCode == text || x.StudentCode.ToString() == text || x.SchoolYear == text).ToList();
+            Load(listResults);
         }
     }
 }
