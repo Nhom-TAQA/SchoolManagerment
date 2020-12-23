@@ -31,12 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgView = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Avatar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbSex = new System.Windows.Forms.ComboBox();
             this.dtDateOfBirth = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +49,11 @@
             this.btAdd = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvt)).BeginInit();
@@ -78,7 +77,6 @@
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
-            this.Avatar,
             this.StudentCode,
             this.FullName,
             this.Sex,
@@ -99,42 +97,6 @@
             this.dgView.Size = new System.Drawing.Size(999, 472);
             this.dgView.TabIndex = 5;
             this.dgView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_CellClick);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            // 
-            // Avatar
-            // 
-            this.Avatar.HeaderText = "Ảnh";
-            this.Avatar.MinimumWidth = 6;
-            this.Avatar.Name = "Avatar";
-            // 
-            // StudentCode
-            // 
-            this.StudentCode.HeaderText = "Mã";
-            this.StudentCode.MinimumWidth = 6;
-            this.StudentCode.Name = "StudentCode";
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "Họ tên";
-            this.FullName.MinimumWidth = 6;
-            this.FullName.Name = "FullName";
-            // 
-            // Sex
-            // 
-            this.Sex.HeaderText = "Giới tính";
-            this.Sex.MinimumWidth = 6;
-            this.Sex.Name = "Sex";
-            // 
-            // DateOfBirth
-            // 
-            this.DateOfBirth.HeaderText = "Ngày sinh";
-            this.DateOfBirth.MinimumWidth = 6;
-            this.DateOfBirth.Name = "DateOfBirth";
             // 
             // panel2
             // 
@@ -160,7 +122,7 @@
             this.cbSex.FormattingEnabled = true;
             this.cbSex.Location = new System.Drawing.Point(724, 14);
             this.cbSex.Name = "cbSex";
-            this.cbSex.Size = new System.Drawing.Size(56, 21);
+            this.cbSex.Size = new System.Drawing.Size(56, 24);
             this.cbSex.TabIndex = 15;
             // 
             // dtDateOfBirth
@@ -169,7 +131,7 @@
             this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDateOfBirth.Location = new System.Drawing.Point(505, 12);
             this.dtDateOfBirth.Name = "dtDateOfBirth";
-            this.dtDateOfBirth.Size = new System.Drawing.Size(111, 24);
+            this.dtDateOfBirth.Size = new System.Drawing.Size(111, 28);
             this.dtDateOfBirth.TabIndex = 14;
             // 
             // picAvt
@@ -186,7 +148,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(424, 64);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 17);
+            this.label6.Size = new System.Drawing.Size(65, 21);
             this.label6.TabIndex = 12;
             this.label6.Text = "Địa chỉ";
             // 
@@ -195,7 +157,7 @@
             this.txbAddress.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbAddress.Location = new System.Drawing.Point(505, 61);
             this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(275, 24);
+            this.txbAddress.Size = new System.Drawing.Size(275, 28);
             this.txbAddress.TabIndex = 11;
             // 
             // label5
@@ -204,7 +166,7 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(415, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.Size = new System.Drawing.Size(84, 21);
             this.label5.TabIndex = 10;
             this.label5.Text = "Ngày sinh";
             // 
@@ -214,7 +176,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(642, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Giới tính";
             // 
@@ -224,7 +186,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(131, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(82, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Họ và tên";
             // 
@@ -233,7 +195,7 @@
             this.txbName.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbName.Location = new System.Drawing.Point(219, 61);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(172, 24);
+            this.txbName.Size = new System.Drawing.Size(172, 28);
             this.txbName.TabIndex = 5;
             // 
             // label2
@@ -242,7 +204,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(131, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 17);
+            this.label2.Size = new System.Drawing.Size(34, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mã";
             // 
@@ -251,7 +213,7 @@
             this.txbCode.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbCode.Location = new System.Drawing.Point(219, 14);
             this.txbCode.Name = "txbCode";
-            this.txbCode.Size = new System.Drawing.Size(170, 24);
+            this.txbCode.Size = new System.Drawing.Size(170, 28);
             this.txbCode.TabIndex = 1;
             // 
             // panel1
@@ -280,7 +242,7 @@
             this.Text.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Text.Location = new System.Drawing.Point(12, 10);
             this.Text.Name = "Text";
-            this.Text.Size = new System.Drawing.Size(126, 26);
+            this.Text.Size = new System.Drawing.Size(126, 30);
             this.Text.TabIndex = 0;
             // 
             // btAdd
@@ -312,6 +274,36 @@
             this.btDelete.TabIndex = 6;
             this.btDelete.UseVisualStyleBackColor = true;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            // 
+            // StudentCode
+            // 
+            this.StudentCode.HeaderText = "Mã";
+            this.StudentCode.MinimumWidth = 6;
+            this.StudentCode.Name = "StudentCode";
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Họ tên";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            // 
+            // Sex
+            // 
+            this.Sex.HeaderText = "Giới tính";
+            this.Sex.MinimumWidth = 6;
+            this.Sex.Name = "Sex";
+            // 
+            // DateOfBirth
+            // 
+            this.DateOfBirth.HeaderText = "Ngày sinh";
+            this.DateOfBirth.MinimumWidth = 6;
+            this.DateOfBirth.Name = "DateOfBirth";
             // 
             // StudentUC
             // 
@@ -346,12 +338,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.TextBox Text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Avatar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
         private System.Windows.Forms.PictureBox picAvt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txbAddress;
@@ -361,5 +347,10 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.ComboBox cbSex;
         private System.Windows.Forms.DateTimePicker dtDateOfBirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
     }
 }
